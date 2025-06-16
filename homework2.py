@@ -1,7 +1,6 @@
-# Запит числа
 number = int(input("Введіть чотиризначне число: "))
 
-# Перевірка
+
 if 1000 <= number <= 9999:
     digit1, remainder = divmod(number, 1000)
     digit2, remainder = divmod(remainder, 100)

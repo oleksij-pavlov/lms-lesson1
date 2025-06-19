@@ -1,6 +1,8 @@
 number_a = int(input("Введіть перше число: "))
-action = input("Введіть дію (+, -, *, /): ")
 number_b = int(input("Введіть друге число: "))
+action = input("Введіть дію (+, -, *, /): ")
+
+
 
 if action == "/" and number_b == 0:
     print("Помилка: не можна ділити на нуль.")

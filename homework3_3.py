@@ -1,7 +1,7 @@
 lst = [9, "focus", [8,6,4], 98, 56]
 
 if len(lst) == 0:
-    result = [[], []]
+    result = [[], []] #lst
 elif len(lst) % 2 == 0:
     half = len(lst) // 2
     result = [lst[:half], lst[half:]]

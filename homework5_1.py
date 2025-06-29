@@ -1,9 +1,7 @@
 import keyword
 import string
-
 input_text = input("Введіть ім'я змінної, ми перевіримо чи воно зарезервоване: ")
 is_valid = True
-
 if not input_text:
     is_valid = False
 elif input_text in keyword.kwlist:

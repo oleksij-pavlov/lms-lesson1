@@ -1,4 +1,4 @@
-def popular_words (text, words):
+def popular_words (text:str, words:str):
     clean_text = text.lower().split()
     vocabulary = {word: clean_text.count(word) for word in words}
 

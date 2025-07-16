@@ -3,10 +3,9 @@ def pow(x):
 
 def some_gen(begin, end, func):
 
-    current = begin
-    for _ in range(end + 1):
+     for _ in range(end):
         yield begin
-        current = func(current)
+        begin = func(begin)
 
 from inspect import isgenerator
 

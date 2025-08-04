@@ -1,15 +1,15 @@
 from st_student import Student
-from st_group import Group
+from st_group import Group, GroupFullException
 
-st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
-st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
-gr = Group('PD1')
-gr.add_student(st1)
-gr.add_student(st2)
-print(gr)
+gr = Group("PD1")
 
-assert gr.find_student('Jobs') == st1  # 'Steve Jobs'
-assert gr.find_student('Jobs2') is None
+for i in range(10):
+    st = Student("Male", 20 + i, f"Name{i}", f"Surname{i}", f"RB{i}")
+    gr.add_student(st)
 
-gr.delete_student('Taylor')
-print(gr)  # Only one student
+
+try:
+    extra_st = Student("Male", 30, "Extra", "Student", "RB11")
+    gr.add_student(extra_st)
+except GroupFullException as e:
+    print(f"Caught exception: {e}")

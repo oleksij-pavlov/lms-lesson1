@@ -15,17 +15,17 @@ class Rectangle:
     def __add__(self, other):
         if not isinstance(other, Rectangle):
             return NotImplemented
-        total_area = self.get_square() + other.get_square()
+        total = self.get_square() + other.get_square()
         width = 2
-        height = total_area / width
+        height = total / width
         return Rectangle(width, height)
 
     def __mul__(self, n):
         if not isinstance(n, (int, float)):
             return NotImplemented
-        new_area = self.get_square() * n
+        new = self.get_square() * n
         width = 2
-        height = new_area / width
+        height = new / width
         return Rectangle(width, height)
 
     def __str__(self):
